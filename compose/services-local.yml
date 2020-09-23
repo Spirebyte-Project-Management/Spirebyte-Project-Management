@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  api-gateway:
+    build: ../src/ApiGateways/Pacco.APIGateway/Spirebyte.APIGateway/src
+    container_name: api-gateway
+    restart: unless-stopped
+    ports:
+      - 5000:80
+    networks:
+      - spirebyte
+
+networks:
+  spirebyte:
+    name: spirebyte-network
+    external: true

@@ -1,0 +1,48 @@
+version: "0.1"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    networks:
+      - spirebyte
+    volumes:
+      - mongo:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - spirebyte
+    # volumes: 
+    #   - rabbitmq:/var/lib/rabbitmq
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    networks:
+      - spirebyte
+    volumes: 
+      - redis:/data
+
+networks:
+  spirebyte:
+    name: spirebyte-network
+
+volumes:
+  mongo:
+    driver: local
+  # rabbitmq:
+  #   driver: local
+  redis:
+    driver: local
