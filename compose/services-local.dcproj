@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>ccf5343b-2616-4bdd-983b-a27a6ab5d0ff</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceName>Spirebyte local services</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="services-local.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+</Project>

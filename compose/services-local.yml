@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   api-gateway:
+    image: ${DOCKER_REGISTRY-}spirebyteapigateway
     build: ../src/ApiGateways
     container_name: api-gateway
     restart: unless-stopped
@@ -13,6 +14,7 @@ services:
       - spirebyte
 
   identity-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
     build: ../src/services/identity
     container_name: identity-service
     restart: unless-stopped
