@@ -23,6 +23,16 @@ services:
     networks:
       - spirebyte
 
+  projects-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
+    build: ../src/services/projects
+    container_name: projects-service
+    restart: unless-stopped
+    ports:
+      - 5001:80
+    networks:
+      - spirebyte
+
 networks:
   spirebyte:
     name: spirebyte-network
