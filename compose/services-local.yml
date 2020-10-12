@@ -33,6 +33,16 @@ services:
     networks:
       - spirebyte
 
+  email-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesemail
+    build: ../src/services/email
+    container_name: email-service
+    restart: unless-stopped
+    ports:
+      - 5002:80
+    networks:
+      - spirebyte
+
 networks:
   spirebyte:
     name: spirebyte-network
