@@ -43,6 +43,17 @@ services:
     networks:
       - spirebyte
 
+  issues-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesissues
+    build: ../src/services/issues
+    container_name: issues-service
+    restart: unless-stopped
+    ports:
+      - 5003:80
+    networks:
+      - spirebyte
+
+
 networks:
   spirebyte:
     name: spirebyte-network
