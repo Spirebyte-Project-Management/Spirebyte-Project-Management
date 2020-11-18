@@ -53,6 +53,18 @@ services:
     volumes:
       - mongo:/data/db
 
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    container_name: sqlserver
+    restart: unless-stopped
+    networks:
+      - spirebyte
+    ports:
+      - 15789:1433
+    environment:
+      - SA_PASSWORD: Your_password123
+      - ACCEPT_EULA: Y
+
   rabbitmq:
     build: ./rabbitmq
     container_name: rabbitmq
@@ -114,6 +126,8 @@ volumes:
   # grafana:
   #   driver: local
   mongo:
+    driver: local
+  sqlserver:
     driver: local
   # prometheus:
   #   driver: local

@@ -53,6 +53,16 @@ services:
     networks:
       - spirebyte
 
+  sprints-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
+    build: ../src/services/sprints
+    container_name: sprints-service
+    restart: unless-stopped
+    ports:
+      - 5005:80
+    networks:
+      - spirebyte
+
 
 networks:
   spirebyte:
