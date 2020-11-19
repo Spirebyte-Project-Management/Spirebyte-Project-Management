@@ -60,10 +60,10 @@ services:
     networks:
       - spirebyte
     ports:
-      - 15789:1433
+      - 1433:1433
     environment:
-      - SA_PASSWORD: Your_password123
-      - ACCEPT_EULA: Y
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
 
   rabbitmq:
     build: ./rabbitmq
