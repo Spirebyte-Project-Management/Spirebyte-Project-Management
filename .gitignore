@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 
 logs/
+/src/.sonarqube
+/src/runSonarQube.bat
