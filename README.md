@@ -6,13 +6,15 @@
     <img src="docs/media/SpireByte-Logo-clean-256.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Spirebyte project management</h3>
+  <div align="center">
+    <h3>Spirebyte project management</h3>
+  </div>
 
   <p align="center">
     A scumboard made with microservices
     <br />
     <br />
-    <a href="https://spirebyte.jordihuntjens.nl">View Demo</a>
+    <a href="https://spirebyte.jordihuntjens.nl">View Demo (Not yet published as of 10/12/2020)</a>
   </p>
 </p>
 
@@ -33,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://spirebyte.jordihuntjens.nl)
+[![Product Name Screen Shot][product-screenshot]](https://git.jordihuntjens.nl/projects/S3PP/repos/spirebyte/browse/docs/media/SpireByte-Preview.png)
 
 There are many scrum boards out there. However, this is the only one created by me. This project was created as a learning experience in the field of microservices. And I dare say it is turning out pretty well.
 
