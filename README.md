@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://git.jordihuntjens.nl/projects/S3PP/repos/spirebyte/browse/docs/media/SpireByte-Preview.png)
+![Product Name Screen Shot](https://git.jordihuntjens.nl/projects/S3PP/repos/spirebyte/browse/docs/media/SpireByte-Preview.png "Preview image")
 
 There are many scrum boards out there. However, this is the only one created by me. This project was created as a learning experience in the field of microservices. And I dare say it is turning out pretty well.
 
