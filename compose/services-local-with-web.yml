@@ -1,0 +1,80 @@
+version: "3.7"
+
+services:
+  api-gateway:
+    image: ${DOCKER_REGISTRY-}spirebyteapigateway
+    build: ../src/ApiGateways
+    container_name: api-gateway
+    restart: unless-stopped
+    environment:
+      - NTRADA_CONFIG=ntrada.docker
+    ports:
+      - 5000:80
+    networks:
+      - spirebyte
+
+  identity-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
+    build: ../src/services/identity
+    container_name: identity-service
+    restart: unless-stopped
+    ports:
+      - 5004:80
+    networks:
+      - spirebyte
+
+  projects-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
+    build: ../src/services/projects
+    container_name: projects-service
+    restart: unless-stopped
+    ports:
+      - 5001:80
+    networks:
+      - spirebyte
+
+  email-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesemail
+    build: ../src/services/email
+    container_name: email-service
+    restart: unless-stopped
+    ports:
+      - 5002:80
+    networks:
+      - spirebyte
+
+  issues-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesissues
+    build: ../src/services/issues
+    container_name: issues-service
+    restart: unless-stopped
+    ports:
+      - 5003:80
+    networks:
+      - spirebyte
+
+  sprints-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
+    build: ../src/services/sprints
+    container_name: sprints-service
+    restart: unless-stopped
+    ports:
+      - 5005:80
+    networks:
+      - spirebyte
+
+  angular-web:
+    image: ${DOCKER_REGISTRY-}spirebyteangularweb
+    build: ../src/web
+    container_name: angular-web
+    restart: unless-stopped
+    ports:
+      - 80:80
+    networks:
+      - spirebyte
+
+
+networks:
+  spirebyte:
+    name: spirebyte-network
+    external: true

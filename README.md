@@ -14,7 +14,7 @@
     A scumboard made with microservices
     <br />
     <br />
-    <a href="https://spirebyte.jordihuntjens.nl">View Demo (Not yet published as of 10/12/2020)</a>
+    <a href="http://spirebyte.jordihuntjens.nl">View Demo</a>
   </p>
 </p>
 
