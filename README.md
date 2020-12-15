@@ -33,7 +33,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="browse/docs/media/SpireByte-Preview.png" alt="Preview">
+<img src="browse/docs/media/SpireByte-Preview.png?raw=" alt="Preview">
 
 
 There are many scrum boards out there. However, this is the only one created by me. This project was created as a learning experience in the field of microservices. And I dare say it is turning out pretty well.
