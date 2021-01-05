@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://git.jordihuntjens.nl/projects/S3PP/repos/spirebyte/browse">
     <img src="docs/media/SpireByte-Logo-clean-256.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -14,7 +14,7 @@
     A scumboard made with microservices
     <br />
     <br />
-    <a href="http://spirebyte.jordihuntjens.nl">View Demo</a>
+    <a href="https://web.spirebyte.nl">View Demo</a>
   </p>
 </p>
 
