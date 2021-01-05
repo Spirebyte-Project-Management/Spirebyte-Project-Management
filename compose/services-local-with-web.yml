@@ -15,7 +15,7 @@ services:
 
   identity-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
-    build: ../src/services/identity
+    build: ../src/Services/Identity
     container_name: identity-service
     restart: unless-stopped
     ports:
@@ -25,7 +25,7 @@ services:
 
   projects-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
-    build: ../src/services/projects
+    build: ../src/Services/Projects
     container_name: projects-service
     restart: unless-stopped
     ports:
@@ -35,7 +35,7 @@ services:
 
   email-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesemail
-    build: ../src/services/email
+    build: ../src/Services/Email
     container_name: email-service
     restart: unless-stopped
     ports:
@@ -45,7 +45,7 @@ services:
 
   issues-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesissues
-    build: ../src/services/issues
+    build: ../src/Services/Issues
     container_name: issues-service
     restart: unless-stopped
     ports:
@@ -55,7 +55,7 @@ services:
 
   sprints-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicessprints
-    build: ../src/services/sprints
+    build: ../src/Services/Sprints
     container_name: sprints-service
     restart: unless-stopped
     ports:
@@ -65,7 +65,7 @@ services:
 
   angular-web:
     image: ${DOCKER_REGISTRY-}spirebyteangularweb
-    build: ../src/web
+    build: ../src/Web
     container_name: angular-web
     restart: unless-stopped
     ports:

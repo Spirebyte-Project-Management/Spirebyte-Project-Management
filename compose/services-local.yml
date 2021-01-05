@@ -8,10 +8,8 @@ services:
     restart: unless-stopped
     environment:
       - NTRADA_CONFIG=ntrada.docker
-      - USE_SSL=true
     ports:
       - 5000:80
-      - 6000:443
     networks:
       - spirebyte
 
