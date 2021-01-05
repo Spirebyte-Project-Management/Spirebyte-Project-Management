@@ -8,6 +8,9 @@ services:
     restart: unless-stopped
     environment:
       - NTRADA_CONFIG=ntrada.docker
+      - VIRTUAL_HOST=api.spirebyte.com
+      - LETSENCRYPT_HOST=api.spirebyte.com \
+      - LETSENCRYPT_EMAIL=spirebyte.jordihuntjens.nl
     ports:
       - 5000:80
     networks:
@@ -68,8 +71,12 @@ services:
     build: ../src/Web
     container_name: angular-web
     restart: unless-stopped
+    environment:
+      - VIRTUAL_HOST=web.spirebyte.com
+      - LETSENCRYPT_HOST=web.spirebyte.com \
+      - LETSENCRYPT_EMAIL=spirebyte.jordihuntjens.nl
     ports:
-      - 80:80
+      - 5100:80
     networks:
       - spirebyte
 
