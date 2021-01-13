@@ -3,7 +3,7 @@ version: "3.7"
 services:
   api-gateway:
     image: ${DOCKER_REGISTRY-}spirebyteapigateway
-    build: ../src/ApiGateways
+    build: ../src/ApiGateways/Spirebyte.APIGateway
     container_name: api-gateway
     restart: unless-stopped
     environment:
@@ -60,6 +60,16 @@ services:
     restart: unless-stopped
     ports:
       - 5005:80
+    networks:
+      - spirebyte
+
+  operations-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
+    build: ../src/Services/Operations
+    container_name: operations-service
+    restart: unless-stopped
+    ports:
+      - 5006:80
     networks:
       - spirebyte
 

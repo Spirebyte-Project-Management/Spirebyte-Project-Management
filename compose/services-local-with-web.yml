@@ -3,14 +3,13 @@ version: "3.7"
 services:
   api-gateway:
     image: ${DOCKER_REGISTRY-}spirebyteapigateway
-    build: ../src/ApiGateways
+    build: ../src/ApiGateways/Spirebyte.APIGateway
     container_name: api-gateway
     restart: unless-stopped
     environment:
       - NTRADA_CONFIG=ntrada.docker
-      - VIRTUAL_HOST=api.spirebyte.com
-      - LETSENCRYPT_HOST=api.spirebyte.com \
-      - LETSENCRYPT_EMAIL=spirebyte.jordihuntjens.nl
+      - VIRTUAL_HOST=api.spirebyte.nl
+      - VIRTUAL_PORT=5000
     ports:
       - 5000:80
     networks:
@@ -66,15 +65,27 @@ services:
     networks:
       - spirebyte
 
+  operations-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
+    build: ../src/Services/Operations
+    container_name: operations-service
+    restart: unless-stopped
+    environment:
+      - VIRTUAL_HOST=websocket.spirebyte.nl
+      - VIRTUAL_PORT=5006
+    ports:
+      - 5006:80
+    networks:
+      - spirebyte
+      
   angular-web:
     image: ${DOCKER_REGISTRY-}spirebyteangularweb
     build: ../src/Web
     container_name: angular-web
     restart: unless-stopped
     environment:
-      - VIRTUAL_HOST=web.spirebyte.com
-      - LETSENCRYPT_HOST=web.spirebyte.com \
-      - LETSENCRYPT_EMAIL=spirebyte.jordihuntjens.nl
+      - VIRTUAL_HOST=web.spirebyte.nl
+      - VIRTUAL_PORT=5100
     ports:
       - 5100:80
     networks:
