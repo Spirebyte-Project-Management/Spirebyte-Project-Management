@@ -116,6 +116,19 @@ services:
     ports:
       - 8200:8200
 
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+    volumes:
+      - minio:/data
+    networks:
+      - spirebyte
+    environment:
+      MINIO_ACCESS_KEY: a6qqJrzRsKXyCWBBAiTX
+      MINIO_SECRET_KEY: FUszZfph3AqHRdB3kOwh
+    command: server /data
+
 networks:
   spirebyte:
     name: spirebyte-network
@@ -126,6 +139,8 @@ volumes:
   # grafana:
   #   driver: local
   mongo:
+    driver: local
+  minio:
     driver: local
   sqlserver:
     driver: local
