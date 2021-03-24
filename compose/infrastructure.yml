@@ -119,11 +119,18 @@ services:
   minio:
     image: minio/minio
     ports:
-      - "9000:9000"
+      - "9100:9100"
     volumes:
       - minio:/data
     networks:
       - spirebyte
+    labels:
+      - traefik.http.routers.storage.rule=Host(`storage.spirebyte.nl`)
+      - traefik.http.routers.storage.entrypoints=websecure
+      - traefik.http.services.storage.loadbalancer.server.port=9100
+      - traefik.http.routers.storage.service=storage
+      - traefik.http.routers.storage.tls=true
+      - traefik.http.routers.storage.tls.certresolver=lets-encrypt
     environment:
       MINIO_ACCESS_KEY: a6qqJrzRsKXyCWBBAiTX
       MINIO_SECRET_KEY: FUszZfph3AqHRdB3kOwh
