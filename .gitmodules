@@ -1,0 +1,24 @@
+[submodule "src/Web-Angular"]
+	path = src/Web-Angular
+	url = https://github.com/Spirebyte-Project-Management/Web-Angular.git
+[submodule "src/Gateway"]
+	path = src/Gateway
+	url = https://github.com/Spirebyte-Project-Management/Gateway.git
+[submodule "src/Operation-Service"]
+	path = src/Operation-Service
+	url = https://github.com/Spirebyte-Project-Management/Operation-Service.git
+[submodule "src/Email-service"]
+	path = src/Email-service
+	url = https://github.com/Spirebyte-Project-Management/Email-service.git
+[submodule "src/Sprint-Service"]
+	path = src/Sprint-Service
+	url = https://github.com/Spirebyte-Project-Management/Sprint-Service.git
+[submodule "src/Identity-Service"]
+	path = src/Identity-Service
+	url = https://github.com/Spirebyte-Project-Management/Identity-Service.git
+[submodule "src/Project-Service"]
+	path = src/Project-Service
+	url = https://github.com/Spirebyte-Project-Management/Project-Service.git
+[submodule "src/Issue-Service"]
+	path = src/Issue-Service
+	url = https://github.com/Spirebyte-Project-Management/Issue-Service.git
