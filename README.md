@@ -76,7 +76,7 @@ https://www.docker.com/
 
 1. Clone the repo
 ```sh
-git clone https://git.jordihuntjens.nl/scm/s3pp/spirebyte.git
+git clone --recursive https://github.com/Spirebyte-Project-Management/Spirebyte-Project-Management.git 
 ```
 2. Run infrastructure services in `Spirebyte/compose` directory
 ```sh
