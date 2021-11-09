@@ -3,7 +3,7 @@ version: "3.7"
 services:
   spirebyte-api-gateway:
     image: ${DOCKER_REGISTRY-}spirebyteapigateway
-    build: ../../Gateway/Spirebyte.APIGateway
+    build: ../src/Gateway
     container_name: spirebyte-api-gateway
     restart: unless-stopped
     environment:
@@ -15,7 +15,7 @@ services:
 
   spirebyte-identity-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
-    build: ../../Identity-Service
+    build: ../src/Identity-Service
     container_name: spirebyte-identity-service
     restart: unless-stopped
     ports:
@@ -25,7 +25,7 @@ services:
 
   spirebyte-projects-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
-    build: ../../Projects
+    build: ../src/Project-Service
     container_name: spirebyte-projects-service
     restart: unless-stopped
     ports:
@@ -35,7 +35,7 @@ services:
 
   spirebyte-email-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesemail
-    build: ../src/Services/Email
+    build: ../src/Email-Service
     container_name: spirebyte-email-service
     restart: unless-stopped
     ports:
@@ -45,7 +45,7 @@ services:
 
   spirebyte-issues-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesissues
-    build: ../src/Services/Issues
+    build: ../src/Issue-Service
     container_name: spirebyte-issues-service
     restart: unless-stopped
     ports:
@@ -55,7 +55,7 @@ services:
 
   spirebyte-sprints-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicessprints
-    build: ../src/Services/Sprints
+    build: ../src/Sprint-Service
     container_name: spirebyte-sprints-service
     restart: unless-stopped
     ports:
@@ -65,7 +65,7 @@ services:
 
   spirebyte-operations-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
-    build: ../src/Services/Operations
+    build: ../src/Operation-Service
     container_name: spirebyte-operations-service
     restart: unless-stopped
     ports:

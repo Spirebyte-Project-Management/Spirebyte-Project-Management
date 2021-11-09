@@ -17,7 +17,7 @@ services:
     container_name: spirebyte-fabio
     restart: unless-stopped
     environment:
-      - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
+      - FABIO_REGISTRY_CONSUL_ADDR=spirebyte-consul:8500
     networks:
       - spirebyte
     # ports:
@@ -53,21 +53,9 @@ services:
     volumes:
       - spirebyte-mongo:/data/db
 
-  spirebyte-sqlserver:
-    image: mcr.microsoft.com/mssql/server
-    container_name: spirebyte-sqlserver
-    restart: unless-stopped
-    networks:
-      - spirebyte
-    ports:
-      - 1433:1433
-    environment:
-      - SA_PASSWORD=Your_password123
-      - ACCEPT_EULA=Y
-
   spirebyte-rabbitmq:
     build: ./rabbitmq
-    container_name: rabbitmq
+    container_name: spirebyte-rabbitmq
     restart: unless-stopped
     networks:
       - spirebyte
@@ -118,6 +106,7 @@ services:
 
   spirebyte-minio:
     image: minio/minio
+    container_name: spirebyte-minio
     ports:
       - "9100:9100"
     volumes:
@@ -148,8 +137,6 @@ volumes:
   spirebyte-mongo:
     driver: local
   spirebyte-minio:
-    driver: local
-  spirebyte-sqlserver:
     driver: local
   # prometheus:
   #   driver: local
