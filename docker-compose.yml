@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  spirebyte.services.issues.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesissuesapi
+    build:
+      context: .
+      dockerfile: src/Issue-Service/src/Spirebyte.Services.Issues.API/Dockerfile
+
+  spirebyte.services.operations.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesoperationsapi
+    build:
+      context: .
+      dockerfile: src/Operation-Service/src/Spirebyte.Services.Operations.API/Dockerfile
+
+
+  spirebyte.services.projects.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesprojectsapi
+    build:
+      context: .
+      dockerfile: src/Project-Service/src/Spirebyte.Services.Projects.API/Dockerfile
+
+
+  spirebyte.services.sprints.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicessprintsapi
+    build:
+      context: .
+      dockerfile: src/Sprint-Service/src/Spirebyte.Services.Sprints.API/Dockerfile
+
+
+  spirebyte.services.identity.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesidentityapi
+    build:
+      context: .
+      dockerfile: src/Identity-Service/src/Spirebyte.Services.Identity.API/Dockerfile
+
+
+  spirebyte.services.email.api:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesemailapi
+    build:
+      context: .
+      dockerfile: src/Email-service/src/Spirebyte.Services.Email.API/Dockerfile
+
+
+  spirebyte.apigateway:
+    image: ${DOCKER_REGISTRY-}spirebyteapigateway
+    build:
+      context: .
+      dockerfile: src/Gateway/src/Dockerfile
+

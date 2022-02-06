@@ -1,0 +1,56 @@
+name: Spirebyte-backend
+services:
+  - name: spirebyte-gateway
+    project: src/Gateway/src/Spirebyte.APIGateway.csproj
+    bindings:
+    - port: 5000
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+        
+  - name: spirebyte-email-service
+    project: src/Email-service/src/Spirebyte.Services.Email.Api/Spirebyte.Services.Email.Api.csproj
+    bindings:
+    - port: 5002
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+
+  - name: spirebyte-project-service
+    project: src/Project-service/src/Spirebyte.Services.Projects.Api/Spirebyte.Services.Projects.Api.csproj
+    bindings:
+    - port: 5001
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+
+  - name: spirebyte-issue-service
+    project: src/Issue-service/src/Spirebyte.Services.Issues.Api/Spirebyte.Services.Issues.Api.csproj
+    bindings:
+    - port: 5003
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+  - name: spirebyte-identity-service
+    project: src/Identity-service/src/Spirebyte.Services.Identity.Api/Spirebyte.Services.Identity.Api.csproj
+    bindings:
+    - port: 5004
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+
+  - name: spirebyte-sprint-service
+    project: src/Sprint-service/src/Spirebyte.Services.Sprints.Api/Spirebyte.Services.Sprints.Api.csproj
+    bindings:
+    - port: 5005
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development
+
+  - name: spirebyte-operation-service
+    project: src/Operation-service/src/Spirebyte.Services.Operations.Api/Spirebyte.Services.Operations.Api.csproj
+    bindings:
+    - port: 5006
+    env:
+      - name: ASPNETCORE_ENVIRONMENT
+        value: development

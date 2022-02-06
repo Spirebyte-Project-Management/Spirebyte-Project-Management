@@ -77,7 +77,7 @@ services:
       - 5006:80
     networks:
       - spirebyte
-      
+  
   angular-web:
     image: ${DOCKER_REGISTRY-}spirebyteangularweb
     build: ../src/Web

@@ -7,10 +7,10 @@ services:
     restart: unless-stopped
     networks:
       - spirebyte
-    # ports:
-    #   - 8500:8500
-    # volumes:
-    #   - consul:/consul/data
+    ports:
+      - 8500:8500
+    volumes:
+      - consul:/consul/data
 
   spirebyte-fabio:
     image: fabiolb/fabio
@@ -20,9 +20,9 @@ services:
       - FABIO_REGISTRY_CONSUL_ADDR=spirebyte-consul:8500
     networks:
       - spirebyte
-    # ports:
-    #   - 9998:9998
-    #   - 9999:9999
+    ports:
+      - 9998:9998
+      - 9999:9999
 
   spirebyte-jaeger:
     image: jaegertracing/all-in-one
@@ -30,14 +30,14 @@ services:
     restart: unless-stopped
     networks:
       - spirebyte
-    # ports:
-    #   - 5775:5775/udp
-    #   - 5778:5778
-    #   - 6831:6831/udp
-    #   - 6832:6832/udp
-    #   - 9411:9411
-    #   - 14268:14268
-    #   - 16686:16686
+    ports:
+      - 5775:5775/udp
+      - 5778:5778
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 9411:9411
+      - 14268:14268
+      - 16686:16686
 
   spirebyte-mongo:
     image: mongo
@@ -49,7 +49,7 @@ services:
     networks:
       - spirebyte
     ports:
-      - 27018:27017
+      - 27017:27017
     volumes:
       - spirebyte-mongo:/data/db
 
@@ -59,12 +59,12 @@ services:
     restart: unless-stopped
     networks:
       - spirebyte
-    # ports:
-    #   - 5672:5672
-    #   - 15672:15672
-    #   - 15692:15692
-    # volumes:
-    #   - rabbitmq:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 15692:15692
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
 
   spirebyte-redis:
     image: redis
@@ -72,8 +72,8 @@ services:
     restart: unless-stopped
     networks:
       - spirebyte
-    # ports:
-    #   - 6379:6379
+    ports:
+      - 6379:6379
     volumes:
       - spirebyte-redis:/data
 
@@ -85,10 +85,10 @@ services:
       - ACCEPT_EULA=Y
     networks:
       - spirebyte
-    # ports:
-    #   - 5341:80
-    # volumes:
-    #   - seq:/data
+    ports:
+      - 5341:80
+    volumes:
+      - seq:/data
 
   spirebyte-vault:
     image: vault
@@ -101,8 +101,8 @@ services:
       - IPC_LOCK
     networks:
       - spirebyte
-    # ports:
-    #   - 8200:8200
+    ports:
+      - 8200:8200
 
   spirebyte-minio:
     image: minio/minio
@@ -130,8 +130,8 @@ networks:
     name: spirebyte-network
 
 volumes:
-  # consul:
-  #   driver: local
+  consul:
+    driver: local
   # grafana:
   #   driver: local
   spirebyte-mongo:
@@ -140,9 +140,9 @@ volumes:
     driver: local
   # prometheus:
   #   driver: local
-  # rabbitmq:
-  #   driver: local
+  rabbitmq:
+    driver: local
   spirebyte-redis:
     driver: local
-  # seq:
-  #   driver: local
+  seq:
+    driver: local

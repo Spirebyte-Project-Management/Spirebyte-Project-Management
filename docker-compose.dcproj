@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+    <PropertyGroup Label="Globals">
+        <ProjectVersion>2.1</ProjectVersion>
+        <DockerTargetOS>Linux</DockerTargetOS>
+        <ProjectGuid>91ee7c7e-8ffb-4cff-875c-1b70ebdc6392</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="docker-compose.override.yml">
+            <DependentUpon>docker-compose.yml</DependentUpon>
+        </None>
+        <None Include="docker-compose.yml"/>
+        <None Include=".dockerignore"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="compose\services-local-with-web.yml"/>
+        <Content Include="compose\services-local.yml"/>
+    </ItemGroup>
+</Project>

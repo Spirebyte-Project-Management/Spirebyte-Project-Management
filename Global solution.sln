@@ -131,6 +131,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{623C2810-FB9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spirebyte.Web.Angular", "src\Web-Angular\Spirebyte.Web.Angular\Spirebyte.Web.Angular.csproj", "{0478025B-B71B-4F5C-970F-9ED66F7E1696}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{91EE7C7E-8FFB-4CFF-875C-1B70EBDC6392}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activity", "Activity", "{1BF8BF5A-035D-4F01-928C-FE4A9C1D1AFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D084F8C7-09A9-4F7B-A274-793BFCE7E5BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BEB5B27E-762A-4A43-AC44-3BFD0F44A1F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Activities.API", "src\Activity-Service\src\Spirebyte.Services.Activities.API\Spirebyte.Services.Activities.API.csproj", "{0E65E18E-75E1-4020-96D2-0CA5244131CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Activities.Application", "src\Activity-Service\src\Spirebyte.Services.Activities.Application\Spirebyte.Services.Activities.Application.csproj", "{4F92D089-83A4-4F03-81A8-E7AF8114A262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Activities.Core", "src\Activity-Service\src\Spirebyte.Services.Activities.Core\Spirebyte.Services.Activities.Core.csproj", "{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Activities.Infrastructure", "src\Activity-Service\src\Spirebyte.Services.Activities.Infrastructure\Spirebyte.Services.Activities.Infrastructure.csproj", "{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{1BA7FCE9-F2DA-4DE0-AC82-5E67D0AE2993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Shared", "src\Shared\src\Spirebyte.Shared\Spirebyte.Shared.csproj", "{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -309,6 +329,30 @@ Global
 		{0478025B-B71B-4F5C-970F-9ED66F7E1696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0478025B-B71B-4F5C-970F-9ED66F7E1696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0478025B-B71B-4F5C-970F-9ED66F7E1696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EE7C7E-8FFB-4CFF-875C-1B70EBDC6392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EE7C7E-8FFB-4CFF-875C-1B70EBDC6392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EE7C7E-8FFB-4CFF-875C-1B70EBDC6392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EE7C7E-8FFB-4CFF-875C-1B70EBDC6392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E65E18E-75E1-4020-96D2-0CA5244131CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E65E18E-75E1-4020-96D2-0CA5244131CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E65E18E-75E1-4020-96D2-0CA5244131CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E65E18E-75E1-4020-96D2-0CA5244131CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F92D089-83A4-4F03-81A8-E7AF8114A262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F92D089-83A4-4F03-81A8-E7AF8114A262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F92D089-83A4-4F03-81A8-E7AF8114A262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F92D089-83A4-4F03-81A8-E7AF8114A262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -375,6 +419,14 @@ Global
 		{C5F3C0FE-7133-4A40-90AE-D10ACDDB07B8} = {142BCBFC-C2A9-45CF-8D1A-DD0700B55600}
 		{4446FC95-F145-46E7-92D5-CCBE0FBDF4C9} = {142BCBFC-C2A9-45CF-8D1A-DD0700B55600}
 		{0478025B-B71B-4F5C-970F-9ED66F7E1696} = {623C2810-FB91-4052-9F56-373D69CABFB3}
+		{1BF8BF5A-035D-4F01-928C-FE4A9C1D1AFE} = {9BCB536F-B261-4F42-9954-9DEE388199F5}
+		{D084F8C7-09A9-4F7B-A274-793BFCE7E5BB} = {1BF8BF5A-035D-4F01-928C-FE4A9C1D1AFE}
+		{BEB5B27E-762A-4A43-AC44-3BFD0F44A1F1} = {1BF8BF5A-035D-4F01-928C-FE4A9C1D1AFE}
+		{0E65E18E-75E1-4020-96D2-0CA5244131CC} = {D084F8C7-09A9-4F7B-A274-793BFCE7E5BB}
+		{4F92D089-83A4-4F03-81A8-E7AF8114A262} = {D084F8C7-09A9-4F7B-A274-793BFCE7E5BB}
+		{7C7AC3DF-0E1C-467A-BE7D-19E8729E80B4} = {D084F8C7-09A9-4F7B-A274-793BFCE7E5BB}
+		{3130B726-1D42-4E3D-8CC8-4FB98D3D3AAA} = {D084F8C7-09A9-4F7B-A274-793BFCE7E5BB}
+		{DE23B469-9F4F-4F57-A3D4-7C7958F1FFDD} = {1BA7FCE9-F2DA-4DE0-AC82-5E67D0AE2993}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B5E55A5-2B4C-435F-9398-202BB214900A}

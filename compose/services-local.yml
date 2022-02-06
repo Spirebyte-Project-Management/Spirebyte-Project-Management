@@ -73,6 +73,15 @@ services:
     networks:
       - spirebyte
 
+  spirebyte-activities-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicesactivities
+    build: ../src/Activity-Service
+    container_name: spirebyte-activities-service
+    restart: unless-stopped
+    ports:
+      - 5007:80
+    networks:
+      - spirebyte
 
 networks:
   spirebyte:
