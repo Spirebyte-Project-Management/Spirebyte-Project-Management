@@ -22,3 +22,9 @@
 [submodule "src/Issue-Service"]
 	path = src/Issue-Service
 	url = https://github.com/Spirebyte-Project-Management/Issue-Service.git
+[submodule "src/Shared"]
+	path = src/Shared
+	url = https://github.com/Spirebyte-Project-Management/Shared.git
+[submodule "src/Activity-Service"]
+	path = src/Activity-Service
+	url = https://github.com/Spirebyte-Project-Management/Activity-Service.git
