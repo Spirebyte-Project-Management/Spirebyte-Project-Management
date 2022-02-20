@@ -3,7 +3,7 @@ version: "3.7"
 services:
   api-gateway:
     image: ${DOCKER_REGISTRY-}spirebyteapigateway
-    build: ../src/ApiGateways/Spirebyte.APIGateway
+    build: ../src/Gateway
     container_name: api-gateway
     restart: unless-stopped
     environment:
@@ -17,7 +17,7 @@ services:
 
   identity-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
-    build: ../src/Services/Identity
+    build: ../src/Identity-Service
     container_name: identity-service
     restart: unless-stopped
     ports:
@@ -27,7 +27,7 @@ services:
 
   projects-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
-    build: ../src/Services/Projects
+    build: ../src/Project-Service
     container_name: projects-service
     restart: unless-stopped
     ports:
@@ -37,7 +37,7 @@ services:
 
   email-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesemail
-    build: ../src/Services/Email
+    build: ../src/Email-Service
     container_name: email-service
     restart: unless-stopped
     ports:
@@ -47,7 +47,7 @@ services:
 
   issues-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicesissues
-    build: ../src/Services/Issues
+    build: ../src/Issue-Service
     container_name: issues-service
     restart: unless-stopped
     ports:
@@ -57,30 +57,41 @@ services:
 
   sprints-service:
     image: ${DOCKER_REGISTRY-}spirebyteservicessprints
-    build: ../src/Services/Sprints
+    build: ../src/Sprint-Service
     container_name: sprints-service
+    restart: unless-stopped
+    ports:
+      - 5007:80
+    networks:
+      - spirebyte
+
+
+  activities-service:
+    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
+    build: ../src/Activity-Service
+    container_name: activities-service
     restart: unless-stopped
     ports:
       - 5005:80
     networks:
       - spirebyte
 
-  operations-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
-    build: ../src/Services/Operations
-    container_name: operations-service
-    restart: unless-stopped
-    environment:
-      - VIRTUAL_HOST=websocket.spirebyte.nl
-      - VIRTUAL_PORT=5006
-    ports:
-      - 5006:80
-    networks:
-      - spirebyte
+  # operations-service:
+  #   image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
+  #   build: ../src/Services/Operations-Service
+  #   container_name: operations-service
+  #   restart: unless-stopped
+  #   environment:
+  #     - VIRTUAL_HOST=websocket.spirebyte.nl
+  #     - VIRTUAL_PORT=5006
+  #   ports:
+  #     - 5006:80
+  #   networks:
+  #     - spirebyte
   
   angular-web:
     image: ${DOCKER_REGISTRY-}spirebyteangularweb
-    build: ../src/Web
+    build: ../src/Web-Angular
     container_name: angular-web
     restart: unless-stopped
     environment:

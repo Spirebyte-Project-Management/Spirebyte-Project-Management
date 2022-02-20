@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     environment:
       - NTRADA_CONFIG=ntrada.docker
+      - VIRTUAL_HOST=api.spirebyte.nl
+      - VIRTUAL_PORT=5000
     ports:
       - 5000:80
     networks:
@@ -59,27 +61,18 @@ services:
     container_name: spirebyte-sprints-service
     restart: unless-stopped
     ports:
-      - 5005:80
+      - 5007:80
     networks:
       - spirebyte
 
-  spirebyte-operations-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesoperations
-    build: ../src/Operation-Service
-    container_name: spirebyte-operations-service
-    restart: unless-stopped
-    ports:
-      - 5006:80
-    networks:
-      - spirebyte
 
   spirebyte-activities-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesactivities
+    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
     build: ../src/Activity-Service
     container_name: spirebyte-activities-service
     restart: unless-stopped
     ports:
-      - 5007:80
+      - 5005:80
     networks:
       - spirebyte
 
