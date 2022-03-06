@@ -1,13 +1,15 @@
 ﻿<component name="ProjectRunConfigurationManager">
-    <configuration default="false" name="Run all services" type="CompoundRunConfigurationType">
-        <toRun name="Spirebyte.APIGateway: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Activities.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Email.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Identity.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Issues.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Operations.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Projects.API: IIS Express" type="LaunchSettings"/>
-        <toRun name="Spirebyte.Services.Sprints.API: IIS Express" type="LaunchSettings"/>
-        <method v="2"/>
-    </configuration>
+  <configuration default="false" name="Run all services" type="CompoundRunConfigurationType">
+    <toRun name="Spirebyte.APIGateway: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Activities.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Email.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Git.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Identity.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Issues.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Operations.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Projects.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Repositories.API: IIS Express" type="LaunchSettings" />
+    <toRun name="Spirebyte.Services.Sprints.API: IIS Express" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
 </component>
