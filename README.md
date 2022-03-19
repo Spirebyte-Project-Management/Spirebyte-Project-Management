@@ -45,7 +45,6 @@ There are many scrum boards out there. However, this is the only one created by 
 * [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)
 * [Angular](https://angular.io/)
 * [Convey](https://convey-stack.github.io/)
-* [Ntrada](https://github.com/snatch-dev/Ntrada)
 * [Metronic](https://keenthemes.com/metronic/)
 
 
