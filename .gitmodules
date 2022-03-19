@@ -28,3 +28,9 @@
 [submodule "src/Activity-Service"]
 	path = src/Activity-Service
 	url = https://github.com/Spirebyte-Project-Management/Activity-Service.git
+[submodule "src/Git-Service"]
+	path = src/Git-Service
+	url = https://github.com/Spirebyte-Project-Management/Git-Service.git
+[submodule "src/Repository-Service"]
+	path = src/Repository-Service
+	url = https://github.com/Spirebyte-Project-Management/Repository-Service.git
