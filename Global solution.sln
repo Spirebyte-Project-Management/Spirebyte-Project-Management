@@ -191,6 +191,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Git.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Git.Tests.Unit", "src\Git-Service\test\Spirebyte.Services.Git.Tests.Unit\Spirebyte.Services.Git.Tests.Unit.csproj", "{98462DE9-EFCF-4AF8-A842-D3B6203A422C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spirebyte.Services.Repositories.Tests.Acceptance", "src\Repository-Service\test\Spirebyte.Services.Repositories.Tests.Acceptance\Spirebyte.Services.Repositories.Tests.Acceptance.csproj", "{5B25E855-2498-455E-B986-CEFE1A253980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -449,6 +451,10 @@ Global
 		{98462DE9-EFCF-4AF8-A842-D3B6203A422C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98462DE9-EFCF-4AF8-A842-D3B6203A422C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98462DE9-EFCF-4AF8-A842-D3B6203A422C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B25E855-2498-455E-B986-CEFE1A253980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B25E855-2498-455E-B986-CEFE1A253980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B25E855-2498-455E-B986-CEFE1A253980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B25E855-2498-455E-B986-CEFE1A253980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -543,6 +549,7 @@ Global
 		{2D4DE8B1-3195-4FB6-A300-B0546D768725} = {48FED0EC-299C-4EA9-AC70-95C19DB3215C}
 		{39FA7481-704A-4B6B-A1F7-906E738FD784} = {48FED0EC-299C-4EA9-AC70-95C19DB3215C}
 		{98462DE9-EFCF-4AF8-A842-D3B6203A422C} = {48FED0EC-299C-4EA9-AC70-95C19DB3215C}
+		{5B25E855-2498-455E-B986-CEFE1A253980} = {C141BA9F-2CBD-4002-8E05-C0EE49024E54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B5E55A5-2B4C-435F-9398-202BB214900A}
