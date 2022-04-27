@@ -75,6 +75,24 @@ services:
       - 5005:80
     networks:
       - spirebyte
+      - 
+  spirebyte-repositories-service:
+    build: ../src/Repository-Service
+    container_name: spirebyte-repositories-service
+    restart: unless-stopped
+    ports:
+      - 5008:80
+    networks:
+      - spirebyte
+
+  spirebyte-git-service:
+    build: ../src/Git-Service
+    container_name: spirebyte-git-service
+    restart: unless-stopped
+    ports:
+      - 5009:80
+    networks:
+      - spirebyte
 
   # operations-service:
   #   image: ${DOCKER_REGISTRY-}spirebyteservicesoperations

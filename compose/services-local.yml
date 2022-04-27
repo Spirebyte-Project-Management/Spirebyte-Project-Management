@@ -2,21 +2,15 @@ version: "3.7"
 
 services:
   spirebyte-api-gateway:
-    image: ${DOCKER_REGISTRY-}spirebyteapigateway
     build: ../src/Gateway
     container_name: spirebyte-api-gateway
     restart: unless-stopped
-    environment:
-      - NTRADA_CONFIG=ntrada.docker
-      - VIRTUAL_HOST=api.spirebyte.nl
-      - VIRTUAL_PORT=5000
     ports:
       - 5000:80
     networks:
       - spirebyte
 
   spirebyte-identity-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesidentity
     build: ../src/Identity-Service
     container_name: spirebyte-identity-service
     restart: unless-stopped
@@ -26,7 +20,6 @@ services:
       - spirebyte
 
   spirebyte-projects-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesprojects
     build: ../src/Project-Service
     container_name: spirebyte-projects-service
     restart: unless-stopped
@@ -36,7 +29,6 @@ services:
       - spirebyte
 
   spirebyte-email-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesemail
     build: ../src/Email-Service
     container_name: spirebyte-email-service
     restart: unless-stopped
@@ -46,7 +38,6 @@ services:
       - spirebyte
 
   spirebyte-issues-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicesissues
     build: ../src/Issue-Service
     container_name: spirebyte-issues-service
     restart: unless-stopped
@@ -56,7 +47,6 @@ services:
       - spirebyte
 
   spirebyte-sprints-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
     build: ../src/Sprint-Service
     container_name: spirebyte-sprints-service
     restart: unless-stopped
@@ -67,12 +57,29 @@ services:
 
 
   spirebyte-activities-service:
-    image: ${DOCKER_REGISTRY-}spirebyteservicessprints
     build: ../src/Activity-Service
     container_name: spirebyte-activities-service
     restart: unless-stopped
     ports:
       - 5005:80
+    networks:
+      - spirebyte
+  
+  spirebyte-repositories-service:
+    build: ../src/Repository-Service
+    container_name: spirebyte-repositories-service
+    restart: unless-stopped
+    ports:
+      - 5008:80
+    networks:
+      - spirebyte
+
+  spirebyte-git-service:
+    build: ../src/Git-Service
+    container_name: spirebyte-git-service
+    restart: unless-stopped
+    ports:
+      - 5009:80
     networks:
       - spirebyte
 
